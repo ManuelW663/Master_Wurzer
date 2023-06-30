@@ -383,13 +383,13 @@
 
 
                     {
-                        "class_name": "Add",
+                        "class_name": "Average",
                         "config": {
-                            "name": "merge_RGBIR", 
+                            "name": "concatenate_RGBIR", 
                             "trainable": true, 
                             "dtype": "float32"
                         },
-                        "name": "merge_RGBIR",
+                        "name": "concatenate_RGBIR",
                         "inbound_nodes": [
                             [
                                 [
@@ -431,7 +431,7 @@
                         "inbound_nodes": [
                             [
                                 [
-                                    "merge_RGBIR",
+                                    "concatenate_RGBIR",
                                     0,
                                     0,
                                     {}
@@ -8277,7 +8277,7 @@
                                     {}
                                 ],
                                 [
-                                    "merge_RGBIR",
+                                    "concatenate_RGBIR",
                                     0,
                                     0,
                                     {}
