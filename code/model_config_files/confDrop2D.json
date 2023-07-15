@@ -205,77 +205,6 @@
                             ]
                         ]
                     },
-
-
-                    {
-                        "class_name": "Lambda",
-                        "config": {
-                            "name": "split_RGB",
-                            "trainable": true,
-                            "dtype": "float32",
-                            "function": [
-                                "4wEAAAAAAAAAAAAAAAEAAAAFAAAAQwAAAHMQAAAAdABqAXwAZAFkAmQDjQNTACkETukEAAAA6f//\n//8pAtoSbnVtX29yX3NpemVfc3BsaXRz2gRheGlzKQLaAnRm2gVzcGxpdCkB2gF4qQByCAAAAPo/\nQzovVXNlcnMvQWRtaW4vQXBwRGF0YS9Mb2NhbC9UZW1wL2lweWtlcm5lbF8xMTMyMC8yNTgxMDYx\nODI2LnB52gg8bGFtYmRhPgMAAADzAAAAAA==\n",
-                                null,
-                                null
-                            ],
-                            "function_type": "lambda",
-                            "module": "__main__",
-                            "output_shape": null,
-                            "output_shape_type": "raw",
-                            "output_shape_module": null,
-                            "arguments": {}
-                        },
-                        "name": "split_RGB",
-                        "inbound_nodes": [
-                            [
-                                [
-                                    "conv1_pad",
-                                    0,
-                                    0,
-                                    {}
-                                ]
-                            ]
-                        ]
-                    },
-                    {
-                        "class_name": "Concatenate",
-                        "config": {
-                            "name": "concatenate_RGB",
-                            "trainable": true,
-                            "dtype": "float32",
-                            "axis": -1
-                        },
-                        "name": "concatenate_RGB",
-                        "inbound_nodes": [
-                            [
-                                [
-                                    "split_RGB",
-                                    0,
-                                    0,
-                                    {}
-                                ],
-                                [
-                                    "split_RGB",
-                                    0,
-                                    1,
-                                    {}
-                                ],
-                                [
-                                    "split_RGB",
-                                    0,
-                                    2,
-                                    {}
-                                ]
-                            ]
-                        ]
-                    },
-                    
-
-
-
-
-
-
                     {
                         "class_name": "Conv2D",
                         "config": {
@@ -320,7 +249,7 @@
                         "inbound_nodes": [
                             [
                                 [
-                                    "concatenate_RGB",
+                                    "conv1_pad",
                                     0,
                                     0,
                                     {}
@@ -328,87 +257,6 @@
                             ]
                         ]
                     },
-                    {
-                        "class_name": "Conv2D",
-                        "config": {
-                            "name": "conv1_conv_ir",
-                            "trainable": true,
-                            "dtype": "float32",
-                            "filters": 64,
-                            "kernel_size": [
-                                7,
-                                7
-                            ],
-                            "strides": [
-                                2,
-                                2
-                            ],
-                            "padding": "valid",
-                            "data_format": "channels_last",
-                            "dilation_rate": [
-                                1,
-                                1
-                            ],
-                            "groups": 1,
-                            "activation": "linear",
-                            "use_bias": true,
-                            "kernel_initializer": {
-                                "class_name": "GlorotUniform",
-                                "config": {
-                                    "seed": null
-                                }
-                            },
-                            "bias_initializer": {
-                                "class_name": "Zeros",
-                                "config": {}
-                            },
-                            "kernel_regularizer": null,
-                            "bias_regularizer": null,
-                            "activity_regularizer": null,
-                            "kernel_constraint": null,
-                            "bias_constraint": null
-                        },
-                        "name": "conv1_conv_ir",
-                        "inbound_nodes": [
-                            [
-                                [
-                                    "split_RGB",
-                                    0,
-                                    3,
-                                    {}
-                                ]
-                            ]
-                        ]
-                    },
-
-
-                    {
-                        "class_name": "Average",
-                        "config": {
-                            "name": "concatenate_RGBIR", 
-                            "trainable": true, 
-                            "dtype": "float32"
-                        },
-                        "name": "concatenate_RGBIR",
-                        "inbound_nodes": [
-                            [
-                                [
-                                    "conv1_conv", 
-                                    0, 
-                                    0, 
-                                    {}
-                                ], 
-                                [
-                                    "conv1_conv_ir", 
-                                    0, 
-                                    0, 
-                                    {}
-                                ]
-                            ]
-                        ]
-                    },
-
-
                     {
                         "class_name": "ZeroPadding2D",
                         "config": {
@@ -431,7 +279,7 @@
                         "inbound_nodes": [
                             [
                                 [
-                                    "concatenate_RGBIR",
+                                    "conv1_conv",
                                     0,
                                     0,
                                     {}
@@ -8277,7 +8125,7 @@
                                     {}
                                 ],
                                 [
-                                    "concatenate_RGBIR",
+                                    "conv1_conv",
                                     0,
                                     0,
                                     {}
