@@ -1,6 +1,6 @@
 # Masterthesis "Einsatz von Transfer Learning bei der Verarbeitung multispektraler Fernerkundungsdaten mit Deep Learning"
 
-Dieses Repository ergänzt die Masterthesis mit o.g. Titel.\
+Dieses Repository ergänzt die Masterthesis mit o.g. Titel.
 
 Der Programmcode im Ordner "code" gliedert sich in:
 - model_config_files:\
@@ -19,5 +19,5 @@ Weiterhin befinden sich hier die Anhänge der Thesis:
 
 Auch die YML-Files zur Erstellung der Anaconda-Environments sind hier verfügbar.
 
-Alle notwendigen Dateien finden sich ebenfalls unter: LINK ZU ABGABE CLOUD
+Alle notwendigen Dateien finden sich ebenfalls in der HCU-Cloud unter https://cloud.hcu-hamburg.de/nextcloud/s/gCzWSJgmYnnbrRR \
 Hier stehen neben der Arbeit selbst auch die verwendeten Gewichte und der Datensatz zur Verfügung.
