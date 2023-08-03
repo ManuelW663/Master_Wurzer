@@ -19,5 +19,8 @@ Weiterhin befinden sich hier die Anhänge der Thesis:
 
 Auch die YML-Files zur Erstellung der Anaconda-Environments sind hier verfügbar.
 
-Alle notwendigen Dateien finden sich ebenfalls in der HCU-Cloud unter\ https://cloud.hcu-hamburg.de/nextcloud/s/gCzWSJgmYnnbrRR \
+Alle notwendigen Dateien finden sich ebenfalls in der HCU-Cloud unter
+
+https://cloud.hcu-hamburg.de/nextcloud/s/gCzWSJgmYnnbrRR
+
 Hier stehen neben der Arbeit selbst auch die verwendeten Gewichte und der Datensatz zur Verfügung.
